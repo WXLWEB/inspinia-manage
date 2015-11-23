@@ -13,14 +13,20 @@
         // abstract: true,
         templateUrl: 'app/components/common/content.html',
       })
-      .state('/manage', {
+      .state('index.manage', {
         url: '/manage',
         templateUrl: 'app/manage/manage.html',
         controller: 'ManageController',
         controllerAs: 'Manage'
+      })
+      .state('index.minor', {
+        url: '/minor',
+        templateUrl: 'app/minor/minor.html',
+        controller: 'ManageController',
+        controllerAs: 'Manage'
       });
 
-    $urlRouterProvider.otherwise('/index');
+    $urlRouterProvider.otherwise('/index/manage');
   }
 
 })();
