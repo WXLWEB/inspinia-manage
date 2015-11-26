@@ -18,8 +18,13 @@
     "angular": "~1.4.2",
     "PACE": "https://github.com/HubSpot/pace.git#~1.0.2",
     "metisMenu": "~2.0.2",
-    "font-awesome": "~4.3.0"
-
+    "font-awesome": "~4.3.0",
+    "oclazyload": "~1.0.9",
+    "angular-flot": "~0.0.15",
+    "flot": "~0.8.3",
+    "flot.curvedlines": "*",
+    "flot.tooltip.pib": "~0.6.7",
+    "jquery.flot.spline": "https://raw.githubusercontent.com/AMKohn/flot/master/jquery.flot.spline.js"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.2"
