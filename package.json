@@ -1,7 +1,9 @@
 {
   "name": "inspiniaManage",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-eslint": "^1.1.1"
+  },
   "scripts": {
     "test": "gulp test"
   },

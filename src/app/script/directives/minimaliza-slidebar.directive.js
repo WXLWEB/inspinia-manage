@@ -2,26 +2,14 @@
   'use strict';
 
 //Directive used to set metisMenu and minimalize button
-angular.module('inspiniaManage')
-    .directive('sideNavigation', function ($timeout) {
-        return {
-            restrict: 'A',
-            link: function (scope, element) {
-                // Call metsi to build when user signup
-                scope.$watch('authentication.user', function() {
-                    $timeout(function() {
-                        element.metisMenu();
-                    });
-                });
-
-            }
-        };
-    })
-    .directive('minimalizaSidebar', function ($timeout) {
-        return {
+  angular
+    .module('inspiniaManage')
+    .directive('minimalizaSidebar', minimalizaSidebar);
+    function minimalizaSidebar($scope,$timeout){
+       return {
             restrict: 'A',
             template: '<a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="" ng-click="minimalize()"><i class="fa fa-bars"></i></a>',
-            controller: function ($scope, $element) {
+            controller: function ($scope) {
                 $scope.minimalize = function () {
                     angular.element('body').toggleClass('mini-navbar');
                     if (!angular.element('body').hasClass('mini-navbar') || angular.element('body').hasClass('body-small')) {
@@ -37,6 +25,6 @@ angular.module('inspiniaManage')
                     }
                 };
             }
-        };
-    });
+        }
+    }
 })();

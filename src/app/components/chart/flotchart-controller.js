@@ -4,7 +4,7 @@
  */
 (function() {
   'use strict';
-
+  /*eslint angular/controller-name: [2,"/[A-Z].*Ctrl/"]*/
   angular
     .module('inspiniaManage')
     .controller('flotChartCtrl', flotChartCtrl);
@@ -285,7 +285,7 @@
             tooltipOpts: {
                 content: "%s for %x was %y",
                 xDateFormat: "%y-%0m-%0d",
-                onHover: function (flotItem, $tooltipEl) {
+                onHover: function () {
                 }
             }
 
@@ -295,14 +295,15 @@
          * Definition of variables
          * Flot chart
          */
-        this.flotChartData = chartData;
-        this.flotBarOptions = barOptions;
-        this.flotLineOptions = lineOptions;
-        this.flotPieData = pieData;
-        this.flotPieOptions = pieOptions;
-        this.flotLineAreaData = lineAreaData;
-        this.flotLineAreaOptions = lineAreaOptions;
-        this.flotMultiData = multiData;
-        this.flotMultiOptions = multiOptions;
+        var vm = this;
+        vm.flotChartData = chartData;
+        vm.flotBarOptions = barOptions;
+        vm.flotLineOptions = lineOptions;
+        vm.flotPieData = pieData;
+        vm.flotPieOptions = pieOptions;
+        vm.flotLineAreaData = lineAreaData;
+        vm.flotLineAreaOptions = lineAreaOptions;
+        vm.flotMultiData = multiData;
+        vm.flotMultiOptions = multiOptions;
     }
 })();

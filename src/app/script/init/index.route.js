@@ -14,7 +14,6 @@
     $stateProvider
       .state('index', {
         url: '/index',
-        // abstract: true,
         templateUrl: 'app/components/common/content.html',
       })
       .state('index.chart', {
