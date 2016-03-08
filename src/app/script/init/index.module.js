@@ -7,7 +7,8 @@
       'ui.router',
       'ui.bootstrap',
       'toastr',
-      'oc.lazyLoad'
+      'oc.lazyLoad',
+      'ngMaterial',
+      'ui.bootstrap'
       ]);
-
 })();

@@ -9,16 +9,16 @@
   function routerConfig($stateProvider, $urlRouterProvider, $ocLazyLoadProvider) {
     $ocLazyLoadProvider.config({
         // Set to true if you want to see what and when is dynamically loaded
-        debug: false
+        debug: true
     });
     $stateProvider
       .state('index', {
         url: '/index',
-        templateUrl: 'app/components/common/content.html',
+        templateUrl: 'app/components/common/content.html'
       })
       .state('index.chart', {
         url: '/chart',
-        templateUrl: 'app/components/chart/flot_chart.html',
+        templateUrl: 'app/chart/flot_chart.html',
         controller: 'flotChartCtrl',
         controllerAs: 'FlotChart',
         resolve: {
@@ -33,7 +33,8 @@
                 '/bower_components/flot/jquery.flot.resize.js',
                 '/bower_components/flot/jquery.flot.pie.js',
                 '/bower_components/flot.curvedlines/curvedLines.js',
-                '/bower_components/angular-flot/angular-flot.js' ]
+                '/bower_components/angular-flot/angular-flot.js'
+                ]
             }]);
           }
         }
@@ -43,9 +44,21 @@
         templateUrl: 'app/minor/minor.html',
         controller: 'ManageController',
         controllerAs: 'Manage'
+      })
+      .state('index.perdict', {
+        url: '/perdict',
+        templateUrl: 'app/perdictMarket/perdictMarket.html',
+        controller: 'PerdictMarketController',
+        controllerAs: 'Predict'
+      })
+      .state('index.luckydraw', {
+        url: '/luckydraw',
+        templateUrl: 'app/luckydraw/luckydraw.html',
+        controller: 'LuckydrawController',
+        controllerAs: 'Luckydraw'
       });
 
-    $urlRouterProvider.otherwise('/index/chart');
+    $urlRouterProvider.otherwise('/index/luckydraw');
   }
 
 })();
